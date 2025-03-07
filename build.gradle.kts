@@ -16,7 +16,7 @@ java {
 
 kotlin {
     explicitApi()
-    jvmToolchain(JavaVersion.current().majorVersion.toInt())
+    jvmToolchain(libs.versions.java.language.get().toInt())
 
     compilerOptions {
         // Target version of the generated JVM bytecode.

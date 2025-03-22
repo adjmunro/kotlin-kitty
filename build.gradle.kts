@@ -26,6 +26,7 @@ kotlin {
         freeCompilerArgs.addAll(
             // Suppressed Warnings
             // "-Xsuppress-warning=",
+            "-opt-in=kotlin.experimental.ExperimentalTypeInference",
         )
 
         // Enable extra K2 warnings.

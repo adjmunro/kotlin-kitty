@@ -1,19 +1,4 @@
-# Kish: K(otlin) ...ish.
-
-> ### ish
-> /ɪʃ/
->
-> noun: ish
-> 1. ~~used as a euphemism for ‘shit’.~~
->
-> adverb: ish
-> 1. to some extent.
->
-> suffix: -ish
-> 1. (forming adjectives from nouns) having the qualities or characteristics of.
-> 2. (forming adjectives from adjectives) somewhat.
-
-# A Kotlin Library to Interface & Delegate Primitives for Value Classes
+# Kty: A Kotlin Library to Interface & Delegate Primitives' Operators for Value Classes
 
 *Or, "Kotlin's missing math operator interfaces and other delusions."*
 
@@ -165,7 +150,7 @@ Fortunately, I thought "maybe the generics *are* the problem?"
 So I tried to remove them. And when that didn't work out, I suddenly realised that the issue was that I only carried the backing field type, but never the wrapper (or vice versa, I forget)! ***You need both!***
 
 Then, all kinds of things came together:
-- [Boxed](./src/main/kotlin/nz/adjmunro/kish/Boxed.kt) is the fundamental interface. It guarantees:
+- [Boxed](./src/main/kotlin/nz/adjmunro/kty/Boxed.kt) is the fundamental interface. It guarantees:
   1. The backing field type;
   2. The implementing child class wrapper type;
   3. A property with a known name of the backing field type;

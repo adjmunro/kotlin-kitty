@@ -1,4 +1,4 @@
-rootProject.name = "kish"
+rootProject.name = "kty"
 
 pluginManagement {
     /**

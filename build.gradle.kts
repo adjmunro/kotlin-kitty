@@ -6,8 +6,8 @@ plugins {
     `maven-publish`
 }
 
-group = "nz.adjmunro.kish"
-version = libs.versions.kish.library.get()
+group = "nz.adjmunro.kty"
+version = libs.versions.kty.library.get()
 
 java {
     withJavadocJar() // TODO set up dokka
@@ -26,6 +26,7 @@ kotlin {
         freeCompilerArgs.addAll(
             // Suppressed Warnings
             // "-Xsuppress-warning=",
+            "-opt-in=kotlin.experimental.ExperimentalTypeInference",
         )
 
         // Enable extra K2 warnings.
@@ -44,11 +45,11 @@ tasks.test {
 
 publishing {
     publications {
-        create<MavenPublication>(name = "kish-maven-artifact") {
+        create<MavenPublication>(name = "kty-maven-artifact") {
             from(components["kotlin"])
             groupId = "nz.adjmunro"
-            artifactId = "kish"
-            version = libs.versions.kish.library.get()
+            artifactId = "kty"
+            version = libs.versions.kty.library.get()
         }
     }
     repositories {
@@ -57,7 +58,7 @@ publishing {
 //       TODO
 //        maven {
 //            name = "GitHubPackages"
-//            url = uri("https://maven.pkg.github.com/adjmunro/kish")
+//            url = uri("https://maven.pkg.github.com/adjmunro/kty")
 //            credentials {
 //                username = System.getenv("GITHUB_ACTOR")
 //                password = System.getenv("GITHUB_TOKEN")

@@ -6,6 +6,7 @@ out/
 .idea/
 build/
 *build/
+local.properties
 
 ### Kotlin ###
 .kotlin

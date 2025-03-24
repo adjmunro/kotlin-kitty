@@ -72,6 +72,9 @@ dependencies {
     implementation(libs.kotlin.stdlib)
 
     testImplementation(libs.kotlin.test)
-    testImplementation(libs.kotest.property)
+    testImplementation(libs.junit5.api)
+    testImplementation(libs.junit5.runtime)
+    testImplementation(libs.junit5.params)
     testImplementation(libs.kotest.assertions)
+    testImplementation(libs.kotest.property)
 }

@@ -8,9 +8,9 @@ import kotlin.test.Test
 class StringyTest {
 
     @JvmInline
-    value class StringySubject(override val value: String) : Stringy<StringySubject> {
-        override val reconstruct: (String) -> StringySubject
-            get() = ::StringySubject
+    value class StringySubject(val str: String) : Stringy<StringySubject> {
+        override val reconstruct: (String) -> StringySubject get() = ::StringySubject
+        override val value: String get() = str
     }
 
     @Test
@@ -31,7 +31,7 @@ class StringyTest {
 
         // Then
         c.shouldBeInstanceOf<StringySubject> {
-            it.value.shouldBeEqual("Hello, World!")
+            it.str.shouldBeEqual("Hello, World!")
         }
     }
 
@@ -46,7 +46,7 @@ class StringyTest {
 
         // Then
         c.shouldBeInstanceOf<StringySubject> {
-            it.value.shouldBeEqual("Hello, World!")
+            it.str.shouldBeEqual("Hello, World!")
         }
     }
 
@@ -62,7 +62,7 @@ class StringyTest {
         // Then
         shouldNotThrowAny {
             c.shouldBeInstanceOf<String> {
-                it.shouldBeEqual("Hello, StringySubject(value=World!)")
+                it.shouldBeEqual("Hello, StringySubject(str=World!)")
             }
         }
     }
@@ -78,7 +78,7 @@ class StringyTest {
 
         // Then
         c.shouldBeInstanceOf<StringySubject> {
-            it.value.shouldBeEqual("Hello, 42")
+            it.str.shouldBeEqual("Hello, 42")
         }
     }
 
@@ -114,7 +114,7 @@ class StringyTest {
         val d = a < b
         val e = a >= a
         val f = a <= a
-        val g = a.value == "A" // No way to override the == operator at this time (reserved).
+        val g = a.str == "A" // No way to override the == operator at this time (reserved).
 
         // Then
         c.shouldBeEqual(false)

@@ -1,3 +1,15 @@
+# TODO: Prepping to go open source (in no particular order)
+- [ ] Comprehensive unit test coverage
+- [ ] Remove unused dependencies from version catalog, used code, unused comments
+- [ ] Add dependabot to update kotlin / dependencies
+- [ ] Add gradle wrapper update plugin
+- [ ] Buy domain name
+- [ ] Register for maven repository
+- [ ] Add CI to build, run unit tests, & publish
+- [ ] Add CI to update semver numbers (e.g. major for big changes, minor for small changes, patch for dependabot updates)
+- [ ] Add CI to auto-merge dependabot PRs if tests are green
+- [ ] Rework readme and add examples
+
 # Kty: A Kotlin Library to Interface & Delegate Primitives' Operators for Value Classes
 
 *Or, "Kotlin's missing math operator interfaces and other delusions."*

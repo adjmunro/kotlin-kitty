@@ -7,11 +7,11 @@ import nz.adjmunro.kty.functions.operators.Mathable
 import nz.adjmunro.kty.functions.operators.NumberMathable
 import nz.adjmunro.kty.tuple.Tuple2
 
-public interface NumberyDuple<ActualWrapper, BackingField> :
+public interface Numbery2D<ActualWrapper, BackingField> :
     Mathable<ActualWrapper, Tuple2<BackingField>>,
     NumberMathable<ActualWrapper, Tuple2<BackingField>>,
     Tuple2<BackingField> where
-    ActualWrapper : NumberyDuple<ActualWrapper, BackingField>,
+    ActualWrapper : Numbery2D<ActualWrapper, BackingField>,
     BackingField : Numbery<BackingField, *>
 {
     public val reconstructor: (BackingField, BackingField) -> ActualWrapper
@@ -20,7 +20,7 @@ public interface NumberyDuple<ActualWrapper, BackingField> :
         get() = { (a, b) -> reconstructor(a, b) }
 
     override val value: Tuple2<BackingField>
-        get() = this@NumberyDuple
+        get() = this@Numbery2D
 
     override val plus: Merge<Tuple2<BackingField>>
         get() = { (a, b), (p, q) -> reconstructor(a + p, b + q) }

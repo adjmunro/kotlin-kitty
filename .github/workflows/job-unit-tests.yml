@@ -38,4 +38,4 @@ jobs:
           name: Unit Test Report
           reporter: java-junit
           path: |
-            **/build/reports/tests/*.xml
+            **/build/reports/tests/*.html

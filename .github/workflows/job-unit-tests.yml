@@ -29,7 +29,7 @@ jobs:
         with:
           name: Unit-Test-Reports
           path: |
-            **/build/reports/tests
+            **/build/reports/tests/test/*.html
 
       - name: Create Test Report
         uses: dorny/test-reporter@v2
@@ -38,4 +38,4 @@ jobs:
           name: Unit Test Report
           reporter: java-junit
           path: |
-            **/build/reports/tests/*.html
+            **/build/reports/tests/test/*.html

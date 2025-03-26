@@ -9,6 +9,8 @@
 - [ ] Add CI to update semver numbers (e.g. major for big changes, minor for small changes, patch for dependabot updates)
 - [ ] Add CI to auto-merge dependabot PRs if tests are green
 - [ ] Rework readme and add examples
+- [ ] Numbery rangeTo operator
+- [ ] Tuple contains, rangeTo, and compareTo(in 0 to ±n)
 
 # Kty: A Kotlin Library to Interface & Delegate Primitives' Operators for Value & Data Classes
 

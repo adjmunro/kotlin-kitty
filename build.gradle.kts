@@ -53,8 +53,21 @@ sourceSets {
     val test by getting { kotlin.srcDirs("src/test/kotlin") }
 }
 
-tasks.test { useJUnitPlatform() }
-jacoco.reportsDirectory = project.layout.buildDirectory.dir("reports/jacoco")
+tasks.test {
+    useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
+}
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        xml.required = true
+        html.required = true
+        html.outputLocation = layout.buildDirectory.dir("reports/jacoco/html")
+    }
+}
+jacoco {
+    reportsDirectory = layout.buildDirectory.dir("reports/jacoco")
+}
 
 publishing {
     publications {

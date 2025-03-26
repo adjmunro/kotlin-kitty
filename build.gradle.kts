@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.jvm)
+    jacoco
     `maven-publish`
 }
 
@@ -53,6 +54,7 @@ sourceSets {
 }
 
 tasks.test { useJUnitPlatform() }
+jacoco.reportsDirectory = project.layout.buildDirectory.dir("reports/jacoco")
 
 publishing {
     publications {

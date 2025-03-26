@@ -1,0 +1,33 @@
+# https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "daily"
+      time: "06:00"
+      timezone: "Pacific/Auckland"
+
+    # Ignore updates for the following dependencies
+    ignore:
+      - dependency-name: "java-bytecode"
+
+    # Groups to prevent overwhelming the team with PRs.
+    groups:
+      # Group all updates together, may be merged when CI is green.
+      patch-updates:
+        update-types: ["*"]
+
+    # Each pull request rebase/merge runs all checks again, which may be costly.
+    rebase-strategy: "auto"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Pacific/Auckland"
+
+    # Each pull request rebase/merge runs all checks again, which may be costly.
+    rebase-strategy: "disabled"

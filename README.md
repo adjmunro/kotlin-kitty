@@ -1,6 +1,6 @@
 # TODO: Prepping to go open source (in no particular order)
 - [ ] Comprehensive unit test coverage
-- [ ] Remove unused dependencies from version catalog, used code, unused comments
+- [x] Remove unused dependencies from version catalog, used code, unused comments
 - [ ] Add dependabot to update kotlin / dependencies
 - [ ] Add gradle wrapper update plugin
 - [ ] Buy domain name
@@ -10,16 +10,102 @@
 - [ ] Add CI to auto-merge dependabot PRs if tests are green
 - [ ] Rework readme and add examples
 
-# Kty: A Kotlin Library to Interface & Delegate Primitives' Operators for Value Classes
+# Kty: A Kotlin Library to Interface & Delegate Primitives' Operators for Value & Data Classes
 
 *Or, "Kotlin's missing math operator interfaces and other delusions."*
 
 ### The goal:
 
-To enable `@JvmInline value class` creations (and `data class` etc.) to behave like their value with minimal effort and maximum inheritance.
+To enable `@JvmInline value class` and `data class` to behave like their internal primitive value(s) with minimal effort and maximum inheritance.
+*No reflecktion! No annotation magick! Just plain-old type-system abuse.*
+
+---
+# Caveats
+What's the catch?
+1. This library has no way to implement `toString()` on your behalf. Without overriding, attempting to autocast to string *will* include the inline class name.
+2. This library has no way to implement the `equals()` operator on your behalf, so you can't compare a Boxed type against it's value type like with many of the other operators. This function is reserved, sorry. Having said that, equals seems to work pretty well out of the box. Two instances of the same value class are equal if the internal value is the same, meanwhile different types containing the same internal value are not equal. 
+3. This library only supports `Numbery` data classes up to 5 dimensions. Only because it seems unlikely to need more.
+4. This library only supports `Numbery` data classes of the same internal type. It's probably possible (just even more messy) to mix and match types, but seems unlikely to be useful.
+5. This library doesn't support `Numbery` data classes with other backing field properties. The main issue here is that on reconstruction, there's no way to identify and pass along a copy of the extra properties. 
+6. This library doesn't support bytes & shorts (secretly ints), chars (didn't seem very useful), or unsigned numbers (they don't even implement `Number`, but are value classes themselves).
+
+# Example Usage
+Without further ado, how do we use it?
+
+### String Value Classes
+There are two `String`-based value class interfaces: `Stringy` and `MutableStringy`. Because most `String` functions are actually extensions, `MutableStringy` not only supports the `plus` operator, it also has a `map` function that unwraps the value class, allows you to apply a transformation, like converting to lowercase, then reconstructs the value class instance with the new value. 
+```kotlin
+@JvmInline // (MUST) You need to pass the wrapper type, Name, as a type argument to Stringy. 
+value class Name(val str: String): Stringy<Name> {
+    // (MUST) Implement this property using a function reference to the constructor.
+    // Then tells the parent interfaces how to make a new instance of [Name].
+    override val reconstruct: (String) -> Name get() = ::Name
+    
+    // (Recommended) This library has no way to implement toString() on your behalf.
+    // If you do not override this function, the default output will be `Name(str=[value])`.
+    override fun toString(): String = str
+  
+    // (Optional) If you do not wish to use [value] as your wrapped property name, 
+    // you can use this trick to map your new property to [value].
+    override val value: String get() = str
+}
+
+@JvmInline
+value class ApiKey(override val value: String): MutableStringy<ApiKey> {
+    override val reconstruct: (String) -> ApiKey get() = ::ApiKey
+}
+// You can use map on a MutableStringy to apply String extension functions.
+val a = ApiKey("ABcdEF").map { it.lowercase() } // ApiKey("abcdef")
+val b = ApiKey("ABcdEF").map(String::lowercase) // ApiKey("abcdef")
+```
+
+### Number Value Classes
+Implementing `Inty`, `Longy`, `Floaty`, or `Doubly` will provide you with a full suite of math & comparison operators both against the wrapper type and any `Number` type for convenience.
+```kotlin
+@JvmInline // (MUST) You need to pass the wrapper type, Point, as a type argument to Inty.
+value class Point(override val value: Int): Inty<Point> {
+    // (MUST) Implement this property using a function reference to the constructor.
+    // Then tells the parent interfaces how to make a new instance of [Point].
+    override val reconstruct: (Int) -> Point get() = ::Point
+    
+    // (Recommended) You can provide secondary constructors for convenience.
+    constructor(n: Number): this(n.roundToInt())
+}
+
+// Math & Comparison against wrapper & numbers are all offloaded to the interfaces.
+val x: Point = Point(4.5) + Point(3) % 3 >= Point(2)
+```
+
+### Number Data Classes
+Implementing `Numbery2D` to `Numbery5D` will provide you with math operators against the same instance type and any `Number` (no comparison, but the interface is there if you want it).
+```kotlin
+// (MUST) The first generic argument is the wrapper type.
+// (MUST) The second generic argument is the backing field of the component properties.
+// Important! In order to guarantee math operations, the backing field can ONLY be a Numbery implementation!
+data class Position(val x: Point, val y: Point): Numbery2D<Position, Point> {
+    // (MUST) Implement this property using a function reference to the constructor.
+    override val reconstructor: (Point, Point) -> Postion get() = ::Position
+    // Note: This function is called differently from value classes! This is because Numbery data classes
+    // still use the Boxed interface. `value` therefore points to the tuple itself, and `reconstruct`
+    // is implemented by the interface to unwrap the tuple into the backing fields 
+    // to enable the same constructor reference trick.
+  
+    // (Recommended) You can provide secondary constructors for convenience.
+    constructor(x: Number, y: Number): this(Point(x), Point(y))
+}
+
+// Multi-argument math is done per argument: i.e. Position(x1 + x2, y1 + y2)
+// Scalar math is applied to each argument: i.e. Position(x*n, y*n)
+val (x, y) = Position(4, 6) + Position(2, 5) * 7
+```
+*Currently, the data class interface implementation is abusing the `componentN()` operators of data classes to avoid enforcing property names and/or necessitating overriding properties. This may be subject to change depending on the language development. We'll have to wait and see what happens with named destructuring, and whether positional destructuring is deprecated.*
 
 ---
 
+### Add to your project
+// TODO
+
+---
 # How we got here.
 ### Why use inline classes?
 

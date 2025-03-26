@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.jvm)
+    jacoco
     `maven-publish`
 }
 
@@ -52,7 +53,25 @@ sourceSets {
     val test by getting { kotlin.srcDirs("src/test/kotlin") }
 }
 
-tasks.test { useJUnitPlatform() }
+tasks.test {
+    useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
+    reports {
+        junitXml.required = true
+        html.required = true
+    }
+}
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        xml.required = true
+        html.required = true
+        html.outputLocation = layout.buildDirectory.dir("reports/jacoco/html")
+    }
+}
+jacoco {
+    reportsDirectory = layout.buildDirectory.dir("reports/jacoco")
+}
 
 publishing {
     publications {

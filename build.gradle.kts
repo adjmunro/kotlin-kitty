@@ -56,6 +56,10 @@ sourceSets {
 tasks.test {
     useJUnitPlatform()
     finalizedBy(tasks.jacocoTestReport)
+    reports {
+        junitXml.required = true
+        html.required = true
+    }
 }
 tasks.jacocoTestReport {
     dependsOn(tasks.test)

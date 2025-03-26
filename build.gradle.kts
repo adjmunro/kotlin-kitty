@@ -1,33 +1,46 @@
+import org.gradle.accessors.dm.LibrariesForLibs.VersionAccessors
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.jvm)
-    `java-library`
     `maven-publish`
 }
 
-group = "nz.adjmunro.kty"
-version = libs.versions.kty.library.get()
+private val Project.semver: String by lazy {
+    val major = version { project.version.major }
+    val minor = version { project.version.minor }
+    val patch = version { project.version.patch }
+    return@lazy "$major.$minor.$patch"
+}
+
+private fun Project.version(selector: VersionAccessors.() -> Provider<String>): String {
+    return this@version.libs.versions.selector().get()
+}
+
+group = version { project.group }
+version = semver
 
 java {
+    sourceCompatibility = JavaVersion.toVersion(version { java.toolchain })
+    targetCompatibility = JavaVersion.toVersion(version { java.bytecode })
+
     withJavadocJar() // TODO set up dokka
     withSourcesJar()
 }
 
 kotlin {
+    // Require explicit visibility & return types.
     explicitApi()
-    jvmToolchain(libs.versions.java.language.get().toInt())
+
+    // JDK version used by compiler & tooling.
+    jvmToolchain(version { java.toolchain } .toInt())
 
     compilerOptions {
         // Target version of the generated JVM bytecode.
-        jvmTarget = JvmTarget.fromTarget(target = libs.versions.java.language.get())
+        jvmTarget = JvmTarget.fromTarget(target = version { java.bytecode })
 
-        // Free compiler args (e.g., experimental -X flags).
-        freeCompilerArgs.addAll(
-            // Suppressed Warnings
-            // "-Xsuppress-warning=",
-            "-opt-in=kotlin.experimental.ExperimentalTypeInference",
-        )
+        // Free compiler args, if necessary (e.g., experimental -X flags).
+        freeCompilerArgs.addAll()
 
         // Enable extra K2 warnings.
         extraWarnings = true
@@ -39,17 +52,15 @@ sourceSets {
     val test by getting { kotlin.srcDirs("src/test/kotlin") }
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
+tasks.test { useJUnitPlatform() }
 
 publishing {
     publications {
         create<MavenPublication>(name = "kty-maven-artifact") {
             from(components["kotlin"])
-            groupId = "nz.adjmunro"
-            artifactId = "kty"
-            version = libs.versions.kty.library.get()
+            groupId = version { project.groupid }
+            artifactId = version { project.artifactid }
+            version = semver
         }
     }
     repositories {
@@ -71,10 +82,5 @@ dependencies {
     implementation(platform(libs.kotlin.bom))
     implementation(libs.kotlin.stdlib)
 
-    testImplementation(libs.kotlin.test)
-    testImplementation(libs.junit5.api)
-    testImplementation(libs.junit5.runtime)
-    testImplementation(libs.junit5.params)
-    testImplementation(libs.kotest.assertions)
-    testImplementation(libs.kotest.property)
+    testImplementation(libs.bundles.test)
 }

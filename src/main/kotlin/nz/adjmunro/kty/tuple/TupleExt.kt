@@ -21,6 +21,9 @@ public typealias Tuple9<T> = Tuple9d<T, T, T, T, T, T, T, T, T>
 public fun <A, B> Pair<A, B>.toTuple(): Duple<A, B> = Duple(first, second)
 public fun <A, B> Tuple2d<A, B>.toPair(): Pair<A, B> = Pair(component1(), component2())
 
+public fun <A, B, C> Triple<A, B, C>.toTuple(): Truple<A, B, C> = Truple(first, second, third)
+public fun <A, B, C> Tuple3d<A, B, C>.toTriple(): Triple<A, B, C> = Triple(component1(), component2(), component3())
+
 public fun <A, B> tupleOf(first: A, second: B): Duple<A, B> = Duple(first, second)
 public fun <A, B, C> tupleOf(first: A, second: B, third: C): Truple<A, B, C> = Truple(first, second, third)
 public fun <A, B, C, D> tupleOf(first: A, second: B, third: C, fourth: D): Quadruple<A, B, C, D> = Quadruple(first, second, third, fourth)

@@ -22,7 +22,7 @@ public fun <A, B> Pair<A, B>.toTuple(): Duple<A, B> = Duple(first, second)
 public fun <A, B> Tuple2d<A, B>.toPair(): Pair<A, B> = Pair(component1(), component2())
 
 public fun <A, B> tupleOf(first: A, second: B): Duple<A, B> = Duple(first, second)
-public fun <A, B, C> tupleOf(first: A, second: B, third: C): Triple<A, B, C> = Triple(first, second, third)
+public fun <A, B, C> tupleOf(first: A, second: B, third: C): Truple<A, B, C> = Truple(first, second, third)
 public fun <A, B, C, D> tupleOf(first: A, second: B, third: C, fourth: D): Quadruple<A, B, C, D> = Quadruple(first, second, third, fourth)
 public fun <A, B, C, D, E> tupleOf(first: A, second: B, third: C, fourth: D, fifth: E): Quintuple<A, B, C, D, E> = Quintuple(first, second, third, fourth, fifth)
 public fun <A, B, C, D, E, F> tupleOf(first: A, second: B, third: C, fourth: D, fifth: E, sixth: F): Sextuple<A, B, C, D, E, F> = Sextuple(first, second, third, fourth, fifth, sixth)

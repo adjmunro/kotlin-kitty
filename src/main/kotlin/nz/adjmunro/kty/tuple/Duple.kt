@@ -11,7 +11,7 @@ public data class Duple<out A, out B>(
         return "Duple<2>($first, $second)"
     }
 
-    public operator fun <C> plus(third: C): Triple<A, B, C> = Triple(
+    public operator fun <C> plus(third: C): Truple<A, B, C> = Truple(
         first = first,
         second = second,
         third = third

@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.dokka)
     jacoco
     `maven-publish`
 }
@@ -25,7 +26,6 @@ java {
     sourceCompatibility = JavaVersion.toVersion(version { java.toolchain })
     targetCompatibility = JavaVersion.toVersion(version { java.bytecode })
 
-    withJavadocJar() // TODO set up dokka
     withSourcesJar()
 }
 
@@ -65,6 +65,7 @@ tasks.test {
         html.required = true
     }
 }
+
 tasks.jacocoTestReport {
     dependsOn(tasks.test)
     reports {
@@ -73,8 +74,15 @@ tasks.jacocoTestReport {
         html.outputLocation = layout.buildDirectory.dir("reports/jacoco/html")
     }
 }
+
 jacoco {
     reportsDirectory = layout.buildDirectory.dir("reports/jacoco")
+}
+
+tasks.register<Jar>("dokkaJar") {
+    from(tasks.dokkaGeneratePublicationHtml)
+    dependsOn(tasks.dokkaGeneratePublicationHtml)
+    archiveClassifier.set("javadoc")
 }
 
 publishing {

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>nz.adjmunro.kty.tuple</title>
+    <link href="../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<link href="../../ui-kit/ui-kit.min.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../ui-kit/ui-kit.min.js" defer="defer"></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+    <nav class="navigation theme-dark" id="navigation-wrapper">
+            <a class="library-name--link" href="../../index.html">
+                    kty
+            </a>
+        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle"
+                type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">
+0.0.1        </div>
+        <div class="navigation-controls">
+        <div class="filter-section filter-section_loading" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active=""
+                        data-filter=":/main">jvm</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox"
+                        data-role="dropdown-toggle"
+                        aria-controls="platform-tags-listbox"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-label="Toggle source sets"
+                ></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox">
+                    <div class="dropdown--header"><span>Platform filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close platform filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option jvm-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":/main"
+                                       data-filter=":/main"/>
+                                <span class="checkbox--icon"></span>
+                                jvm
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </div>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button"
+                    type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
+            </div>
+        </div>
+    </nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                    <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list"
+                        data-role="dropdown-listbox">
+                        <div class="dropdown--header">
+                            <span>
+                                    kty
+                            </span>
+                            <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                                <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                            </button>
+                        </div>
+                        <div class="sidebar--inner" id="sideMenu"></div>
+                    </ul>
+                    <div class="dropdown--overlay"></div>
+                </div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="package" id="content" pageIds="kty::nz.adjmunro.kty.tuple////PointingToDeclaration//-251573632">
+  <div class="breadcrumbs"><a href="../../index.html">kty</a><span class="delimiter">/</span><span class="current">nz.adjmunro.kty.tuple</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-256456306%2FClasslikes%2F-251573632" anchor-label="Duple" id="-256456306%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-duple/index.html"><span><span>Duple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-256456306%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-duple/index.html">Duple</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-duple/index.html">A</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-duple/index.html">B</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>first<span class="token operator">: </span><a href="-duple/index.html">A</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>second<span class="token operator">: </span><a href="-duple/index.html">B</a></span></span><span class="token punctuation">)</span> : <a href="-tuple/-tuple2d/index.html">Tuple.Tuple2d</a><span class="token operator">&lt;</span><a href="-duple/index.html">A</a><span class="token punctuation">, </span><a href="-duple/index.html">B</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-130608507%2FClasslikes%2F-251573632" anchor-label="Nonuple" id="-130608507%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-nonuple/index.html"><span><span>Nonuple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-130608507%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-nonuple/index.html">Nonuple</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-nonuple/index.html">A</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-nonuple/index.html">B</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-nonuple/index.html">C</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-nonuple/index.html">D</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-nonuple/index.html">E</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-nonuple/index.html">F</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-nonuple/index.html">G</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-nonuple/index.html">H</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-nonuple/index.html">I</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>first<span class="token operator">: </span><a href="-nonuple/index.html">A</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>second<span class="token operator">: </span><a href="-nonuple/index.html">B</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>third<span class="token operator">: </span><a href="-nonuple/index.html">C</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fourth<span class="token operator">: </span><a href="-nonuple/index.html">D</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fifth<span class="token operator">: </span><a href="-nonuple/index.html">E</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sixth<span class="token operator">: </span><a href="-nonuple/index.html">F</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>seventh<span class="token operator">: </span><a href="-nonuple/index.html">G</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>eighth<span class="token operator">: </span><a href="-nonuple/index.html">H</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>ninth<span class="token operator">: </span><a href="-nonuple/index.html">I</a></span></span><span class="token punctuation">)</span> : <a href="-tuple/-tuple9d/index.html">Tuple.Tuple9d</a><span class="token operator">&lt;</span><a href="-nonuple/index.html">A</a><span class="token punctuation">, </span><a href="-nonuple/index.html">B</a><span class="token punctuation">, </span><a href="-nonuple/index.html">C</a><span class="token punctuation">, </span><a href="-nonuple/index.html">D</a><span class="token punctuation">, </span><a href="-nonuple/index.html">E</a><span class="token punctuation">, </span><a href="-nonuple/index.html">F</a><span class="token punctuation">, </span><a href="-nonuple/index.html">G</a><span class="token punctuation">, </span><a href="-nonuple/index.html">H</a><span class="token punctuation">, </span><a href="-nonuple/index.html">I</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1987447534%2FClasslikes%2F-251573632" anchor-label="Octuple" id="-1987447534%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-octuple/index.html"><span><span>Octuple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1987447534%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-octuple/index.html">Octuple</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-octuple/index.html">A</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-octuple/index.html">B</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-octuple/index.html">C</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-octuple/index.html">D</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-octuple/index.html">E</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-octuple/index.html">F</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-octuple/index.html">G</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-octuple/index.html">H</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>first<span class="token operator">: </span><a href="-octuple/index.html">A</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>second<span class="token operator">: </span><a href="-octuple/index.html">B</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>third<span class="token operator">: </span><a href="-octuple/index.html">C</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fourth<span class="token operator">: </span><a href="-octuple/index.html">D</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fifth<span class="token operator">: </span><a href="-octuple/index.html">E</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sixth<span class="token operator">: </span><a href="-octuple/index.html">F</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>seventh<span class="token operator">: </span><a href="-octuple/index.html">G</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>eighth<span class="token operator">: </span><a href="-octuple/index.html">H</a></span></span><span class="token punctuation">)</span> : <a href="-tuple/-tuple8d/index.html">Tuple.Tuple8d</a><span class="token operator">&lt;</span><a href="-octuple/index.html">A</a><span class="token punctuation">, </span><a href="-octuple/index.html">B</a><span class="token punctuation">, </span><a href="-octuple/index.html">C</a><span class="token punctuation">, </span><a href="-octuple/index.html">D</a><span class="token punctuation">, </span><a href="-octuple/index.html">E</a><span class="token punctuation">, </span><a href="-octuple/index.html">F</a><span class="token punctuation">, </span><a href="-octuple/index.html">G</a><span class="token punctuation">, </span><a href="-octuple/index.html">H</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1416428345%2FClasslikes%2F-251573632" anchor-label="Quadruple" id="-1416428345%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-quadruple/index.html"><span><span>Quadruple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1416428345%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-quadruple/index.html">Quadruple</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-quadruple/index.html">A</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-quadruple/index.html">B</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-quadruple/index.html">C</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-quadruple/index.html">D</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>first<span class="token operator">: </span><a href="-quadruple/index.html">A</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>second<span class="token operator">: </span><a href="-quadruple/index.html">B</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>third<span class="token operator">: </span><a href="-quadruple/index.html">C</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fourth<span class="token operator">: </span><a href="-quadruple/index.html">D</a></span></span><span class="token punctuation">)</span> : <a href="-tuple/-tuple4d/index.html">Tuple.Tuple4d</a><span class="token operator">&lt;</span><a href="-quadruple/index.html">A</a><span class="token punctuation">, </span><a href="-quadruple/index.html">B</a><span class="token punctuation">, </span><a href="-quadruple/index.html">C</a><span class="token punctuation">, </span><a href="-quadruple/index.html">D</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1081725561%2FClasslikes%2F-251573632" anchor-label="Quintuple" id="-1081725561%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-quintuple/index.html"><span><span>Quintuple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1081725561%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-quintuple/index.html">Quintuple</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-quintuple/index.html">A</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-quintuple/index.html">B</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-quintuple/index.html">C</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-quintuple/index.html">D</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-quintuple/index.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>first<span class="token operator">: </span><a href="-quintuple/index.html">A</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>second<span class="token operator">: </span><a href="-quintuple/index.html">B</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>third<span class="token operator">: </span><a href="-quintuple/index.html">C</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fourth<span class="token operator">: </span><a href="-quintuple/index.html">D</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fifth<span class="token operator">: </span><a href="-quintuple/index.html">E</a></span></span><span class="token punctuation">)</span> : <a href="-tuple/-tuple5d/index.html">Tuple.Tuple5d</a><span class="token operator">&lt;</span><a href="-quintuple/index.html">A</a><span class="token punctuation">, </span><a href="-quintuple/index.html">B</a><span class="token punctuation">, </span><a href="-quintuple/index.html">C</a><span class="token punctuation">, </span><a href="-quintuple/index.html">D</a><span class="token punctuation">, </span><a href="-quintuple/index.html">E</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1601637138%2FClasslikes%2F-251573632" anchor-label="Septuple" id="1601637138%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-septuple/index.html"><span><span>Septuple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1601637138%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-septuple/index.html">Septuple</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-septuple/index.html">A</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-septuple/index.html">B</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-septuple/index.html">C</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-septuple/index.html">D</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-septuple/index.html">E</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-septuple/index.html">F</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-septuple/index.html">G</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>first<span class="token operator">: </span><a href="-septuple/index.html">A</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>second<span class="token operator">: </span><a href="-septuple/index.html">B</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>third<span class="token operator">: </span><a href="-septuple/index.html">C</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fourth<span class="token operator">: </span><a href="-septuple/index.html">D</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fifth<span class="token operator">: </span><a href="-septuple/index.html">E</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sixth<span class="token operator">: </span><a href="-septuple/index.html">F</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>seventh<span class="token operator">: </span><a href="-septuple/index.html">G</a></span></span><span class="token punctuation">)</span> : <a href="-tuple/-tuple7d/index.html">Tuple.Tuple7d</a><span class="token operator">&lt;</span><a href="-septuple/index.html">A</a><span class="token punctuation">, </span><a href="-septuple/index.html">B</a><span class="token punctuation">, </span><a href="-septuple/index.html">C</a><span class="token punctuation">, </span><a href="-septuple/index.html">D</a><span class="token punctuation">, </span><a href="-septuple/index.html">E</a><span class="token punctuation">, </span><a href="-septuple/index.html">F</a><span class="token punctuation">, </span><a href="-septuple/index.html">G</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="113069338%2FClasslikes%2F-251573632" anchor-label="Sextuple" id="113069338%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-sextuple/index.html"><span><span>Sextuple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="113069338%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-sextuple/index.html">Sextuple</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-sextuple/index.html">A</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-sextuple/index.html">B</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-sextuple/index.html">C</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-sextuple/index.html">D</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-sextuple/index.html">E</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-sextuple/index.html">F</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>first<span class="token operator">: </span><a href="-sextuple/index.html">A</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>second<span class="token operator">: </span><a href="-sextuple/index.html">B</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>third<span class="token operator">: </span><a href="-sextuple/index.html">C</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fourth<span class="token operator">: </span><a href="-sextuple/index.html">D</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>fifth<span class="token operator">: </span><a href="-sextuple/index.html">E</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>sixth<span class="token operator">: </span><a href="-sextuple/index.html">F</a></span></span><span class="token punctuation">)</span> : <a href="-tuple/-tuple6d/index.html">Tuple.Tuple6d</a><span class="token operator">&lt;</span><a href="-sextuple/index.html">A</a><span class="token punctuation">, </span><a href="-sextuple/index.html">B</a><span class="token punctuation">, </span><a href="-sextuple/index.html">C</a><span class="token punctuation">, </span><a href="-sextuple/index.html">D</a><span class="token punctuation">, </span><a href="-sextuple/index.html">E</a><span class="token punctuation">, </span><a href="-sextuple/index.html">F</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1996203050%2FClasslikes%2F-251573632" anchor-label="Truple" id="1996203050%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-truple/index.html"><span><span>Truple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1996203050%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="-truple/index.html">Truple</a><span class="token operator">&lt;</span><span class="token keyword">out </span><a href="-truple/index.html">A</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-truple/index.html">B</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-truple/index.html">C</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>first<span class="token operator">: </span><a href="-truple/index.html">A</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>second<span class="token operator">: </span><a href="-truple/index.html">B</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>third<span class="token operator">: </span><a href="-truple/index.html">C</a></span></span><span class="token punctuation">)</span> : <a href="-tuple/-tuple3d/index.html">Tuple.Tuple3d</a><span class="token operator">&lt;</span><a href="-truple/index.html">A</a><span class="token punctuation">, </span><a href="-truple/index.html">B</a><span class="token punctuation">, </span><a href="-truple/index.html">C</a><span class="token operator">&gt; </span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-75398274%2FClasslikes%2F-251573632" anchor-label="Tuple" id="-75398274%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tuple/index.html"><span><span>Tuple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-75398274%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-tuple/index.html">Tuple</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-139784558%2FClasslikes%2F-251573632" anchor-label="Tuple2" id="-139784558%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tuple2/index.html"><span><span>Tuple2</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-139784558%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tuple2/index.html">Tuple2</a><span class="token operator">&lt;</span><a href="-tuple2/index.html">T</a><span class="token operator">&gt;</span><span class="token operator"> = </span><a href="-tuple/-tuple2d/index.html">Tuple.Tuple2d</a><span class="token operator">&lt;</span><a href="-tuple2/index.html">T</a><span class="token punctuation">, </span><a href="-tuple2/index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-108764751%2FClasslikes%2F-251573632" anchor-label="Tuple3" id="-108764751%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tuple3/index.html"><span><span>Tuple3</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-108764751%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tuple3/index.html">Tuple3</a><span class="token operator">&lt;</span><a href="-tuple3/index.html">T</a><span class="token operator">&gt;</span><span class="token operator"> = </span><a href="-tuple/-tuple3d/index.html">Tuple.Tuple3d</a><span class="token operator">&lt;</span><a href="-tuple3/index.html">T</a><span class="token punctuation">, </span><a href="-tuple3/index.html">T</a><span class="token punctuation">, </span><a href="-tuple3/index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-77744944%2FClasslikes%2F-251573632" anchor-label="Tuple4" id="-77744944%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tuple4/index.html"><span><span>Tuple4</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-77744944%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tuple4/index.html">Tuple4</a><span class="token operator">&lt;</span><a href="-tuple4/index.html">T</a><span class="token operator">&gt;</span><span class="token operator"> = </span><a href="-tuple/-tuple4d/index.html">Tuple.Tuple4d</a><span class="token operator">&lt;</span><a href="-tuple4/index.html">T</a><span class="token punctuation">, </span><a href="-tuple4/index.html">T</a><span class="token punctuation">, </span><a href="-tuple4/index.html">T</a><span class="token punctuation">, </span><a href="-tuple4/index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-46725137%2FClasslikes%2F-251573632" anchor-label="Tuple5" id="-46725137%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tuple5/index.html"><span><span>Tuple5</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-46725137%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tuple5/index.html">Tuple5</a><span class="token operator">&lt;</span><a href="-tuple5/index.html">T</a><span class="token operator">&gt;</span><span class="token operator"> = </span><a href="-tuple/-tuple5d/index.html">Tuple.Tuple5d</a><span class="token operator">&lt;</span><a href="-tuple5/index.html">T</a><span class="token punctuation">, </span><a href="-tuple5/index.html">T</a><span class="token punctuation">, </span><a href="-tuple5/index.html">T</a><span class="token punctuation">, </span><a href="-tuple5/index.html">T</a><span class="token punctuation">, </span><a href="-tuple5/index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-15705330%2FClasslikes%2F-251573632" anchor-label="Tuple6" id="-15705330%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tuple6/index.html"><span><span>Tuple6</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-15705330%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tuple6/index.html">Tuple6</a><span class="token operator">&lt;</span><a href="-tuple6/index.html">T</a><span class="token operator">&gt;</span><span class="token operator"> = </span><a href="-tuple/-tuple6d/index.html">Tuple.Tuple6d</a><span class="token operator">&lt;</span><a href="-tuple6/index.html">T</a><span class="token punctuation">, </span><a href="-tuple6/index.html">T</a><span class="token punctuation">, </span><a href="-tuple6/index.html">T</a><span class="token punctuation">, </span><a href="-tuple6/index.html">T</a><span class="token punctuation">, </span><a href="-tuple6/index.html">T</a><span class="token punctuation">, </span><a href="-tuple6/index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="15314477%2FClasslikes%2F-251573632" anchor-label="Tuple7" id="15314477%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tuple7/index.html"><span><span>Tuple7</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="15314477%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tuple7/index.html">Tuple7</a><span class="token operator">&lt;</span><a href="-tuple7/index.html">T</a><span class="token operator">&gt;</span><span class="token operator"> = </span><a href="-tuple/-tuple7d/index.html">Tuple.Tuple7d</a><span class="token operator">&lt;</span><a href="-tuple7/index.html">T</a><span class="token punctuation">, </span><a href="-tuple7/index.html">T</a><span class="token punctuation">, </span><a href="-tuple7/index.html">T</a><span class="token punctuation">, </span><a href="-tuple7/index.html">T</a><span class="token punctuation">, </span><a href="-tuple7/index.html">T</a><span class="token punctuation">, </span><a href="-tuple7/index.html">T</a><span class="token punctuation">, </span><a href="-tuple7/index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="46334284%2FClasslikes%2F-251573632" anchor-label="Tuple8" id="46334284%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tuple8/index.html"><span><span>Tuple8</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="46334284%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tuple8/index.html">Tuple8</a><span class="token operator">&lt;</span><a href="-tuple8/index.html">T</a><span class="token operator">&gt;</span><span class="token operator"> = </span><a href="-tuple/-tuple8d/index.html">Tuple.Tuple8d</a><span class="token operator">&lt;</span><a href="-tuple8/index.html">T</a><span class="token punctuation">, </span><a href="-tuple8/index.html">T</a><span class="token punctuation">, </span><a href="-tuple8/index.html">T</a><span class="token punctuation">, </span><a href="-tuple8/index.html">T</a><span class="token punctuation">, </span><a href="-tuple8/index.html">T</a><span class="token punctuation">, </span><a href="-tuple8/index.html">T</a><span class="token punctuation">, </span><a href="-tuple8/index.html">T</a><span class="token punctuation">, </span><a href="-tuple8/index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="77354091%2FClasslikes%2F-251573632" anchor-label="Tuple9" id="77354091%2FClasslikes%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-tuple9/index.html"><span><span>Tuple9</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="77354091%2FClasslikes%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">typealias </span><a href="-tuple9/index.html">Tuple9</a><span class="token operator">&lt;</span><a href="-tuple9/index.html">T</a><span class="token operator">&gt;</span><span class="token operator"> = </span><a href="-tuple/-tuple9d/index.html">Tuple.Tuple9d</a><span class="token operator">&lt;</span><a href="-tuple9/index.html">T</a><span class="token punctuation">, </span><a href="-tuple9/index.html">T</a><span class="token punctuation">, </span><a href="-tuple9/index.html">T</a><span class="token punctuation">, </span><a href="-tuple9/index.html">T</a><span class="token punctuation">, </span><a href="-tuple9/index.html">T</a><span class="token punctuation">, </span><a href="-tuple9/index.html">T</a><span class="token punctuation">, </span><a href="-tuple9/index.html">T</a><span class="token punctuation">, </span><a href="-tuple9/index.html">T</a><span class="token punctuation">, </span><a href="-tuple9/index.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1906152488%2FFunctions%2F-251573632" anchor-label="toList" id="-1906152488%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-list.html"><span>to</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1906152488%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt; </span><a href="-tuple2/index.html">Tuple2</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-list.html"><span class="token function">toList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt; </span><a href="-tuple3/index.html">Tuple3</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-list.html"><span class="token function">toList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt; </span><a href="-tuple4/index.html">Tuple4</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-list.html"><span class="token function">toList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt; </span><a href="-tuple5/index.html">Tuple5</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-list.html"><span class="token function">toList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt; </span><a href="-tuple6/index.html">Tuple6</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-list.html"><span class="token function">toList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt; </span><a href="-tuple7/index.html">Tuple7</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-list.html"><span class="token function">toList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt; </span><a href="-tuple8/index.html">Tuple8</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-list.html"><span class="token function">toList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt; </span><a href="-tuple9/index.html">Tuple9</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-list.html"><span class="token function">toList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="to-list.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2036170442%2FFunctions%2F-251573632" anchor-label="toPair" id="2036170442%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-pair.html"><span>to</span><wbr></wbr><span><span>Pair</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2036170442%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-pair.html">A</a><span class="token punctuation">, </span><a href="to-pair.html">B</a><span class="token operator">&gt; </span><a href="-tuple/-tuple2d/index.html">Tuple.Tuple2d</a><span class="token operator">&lt;</span><a href="to-pair.html">A</a><span class="token punctuation">, </span><a href="to-pair.html">B</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-pair.html"><span class="token function">toPair</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="to-pair.html">A</a><span class="token punctuation">, </span><a href="to-pair.html">B</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-224008768%2FFunctions%2F-251573632" anchor-label="toSequence" id="-224008768%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-sequence.html"><span>to</span><wbr></wbr><span><span>Sequence</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-224008768%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt; </span><a href="-tuple2/index.html">Tuple2</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-sequence.html"><span class="token function">toSequence</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt; </span><a href="-tuple3/index.html">Tuple3</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-sequence.html"><span class="token function">toSequence</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt; </span><a href="-tuple4/index.html">Tuple4</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-sequence.html"><span class="token function">toSequence</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt; </span><a href="-tuple5/index.html">Tuple5</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-sequence.html"><span class="token function">toSequence</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt; </span><a href="-tuple6/index.html">Tuple6</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-sequence.html"><span class="token function">toSequence</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt; </span><a href="-tuple7/index.html">Tuple7</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-sequence.html"><span class="token function">toSequence</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt; </span><a href="-tuple8/index.html">Tuple8</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-sequence.html"><span class="token function">toSequence</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt; </span><a href="-tuple9/index.html">Tuple9</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-sequence.html"><span class="token function">toSequence</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.sequences/-sequence/index.html">Sequence</a><span class="token operator">&lt;</span><a href="to-sequence.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="86008880%2FFunctions%2F-251573632" anchor-label="toSet" id="86008880%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-set.html"><span>to</span><wbr></wbr><span><span>Set</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="86008880%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt; </span><a href="-tuple2/index.html">Tuple2</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-set.html"><span class="token function">toSet</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt; </span><a href="-tuple3/index.html">Tuple3</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-set.html"><span class="token function">toSet</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt; </span><a href="-tuple4/index.html">Tuple4</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-set.html"><span class="token function">toSet</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt; </span><a href="-tuple5/index.html">Tuple5</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-set.html"><span class="token function">toSet</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt; </span><a href="-tuple6/index.html">Tuple6</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-set.html"><span class="token function">toSet</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt; </span><a href="-tuple7/index.html">Tuple7</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-set.html"><span class="token function">toSet</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt; </span><a href="-tuple8/index.html">Tuple8</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-set.html"><span class="token function">toSet</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt; </span><a href="-tuple9/index.html">Tuple9</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-set.html"><span class="token function">toSet</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-set/index.html">Set</a><span class="token operator">&lt;</span><a href="to-set.html">T</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1990965585%2FFunctions%2F-251573632" anchor-label="toTriple" id="-1990965585%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-triple.html"><span>to</span><wbr></wbr><span><span>Triple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1990965585%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-triple.html">A</a><span class="token punctuation">, </span><a href="to-triple.html">B</a><span class="token punctuation">, </span><a href="to-triple.html">C</a><span class="token operator">&gt; </span><a href="-tuple/-tuple3d/index.html">Tuple.Tuple3d</a><span class="token operator">&lt;</span><a href="to-triple.html">A</a><span class="token punctuation">, </span><a href="to-triple.html">B</a><span class="token punctuation">, </span><a href="to-triple.html">C</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-triple.html"><span class="token function">toTriple</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-triple/index.html">Triple</a><span class="token operator">&lt;</span><a href="to-triple.html">A</a><span class="token punctuation">, </span><a href="to-triple.html">B</a><span class="token punctuation">, </span><a href="to-triple.html">C</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-774333872%2FFunctions%2F-251573632" anchor-label="toTuple" id="-774333872%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-tuple.html"><span>to</span><wbr></wbr><span><span>Tuple</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-774333872%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-tuple.html">A</a><span class="token punctuation">, </span><a href="to-tuple.html">B</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="to-tuple.html">A</a><span class="token punctuation">, </span><a href="to-tuple.html">B</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-tuple.html"><span class="token function">toTuple</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-duple/index.html">Duple</a><span class="token operator">&lt;</span><a href="to-tuple.html">A</a><span class="token punctuation">, </span><a href="to-tuple.html">B</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-tuple.html">A</a><span class="token punctuation">, </span><a href="to-tuple.html">B</a><span class="token punctuation">, </span><a href="to-tuple.html">C</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-triple/index.html">Triple</a><span class="token operator">&lt;</span><a href="to-tuple.html">A</a><span class="token punctuation">, </span><a href="to-tuple.html">B</a><span class="token punctuation">, </span><a href="to-tuple.html">C</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-tuple.html"><span class="token function">toTuple</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-truple/index.html">Truple</a><span class="token operator">&lt;</span><a href="to-tuple.html">A</a><span class="token punctuation">, </span><a href="to-tuple.html">B</a><span class="token punctuation">, </span><a href="to-tuple.html">C</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="693152696%2FFunctions%2F-251573632" anchor-label="tupleOf" id="693152696%2FFunctions%2F-251573632" data-filterable-set=":/main"></a>
+          <div class="table-row" data-filterable-current=":/main" data-filterable-set=":/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tuple-of.html"><span>tuple</span><wbr></wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="693152696%2FFunctions%2F-251573632"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token operator">&gt; </span><a href="tuple-of.html"><span class="token function">tupleOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">first<span class="token operator">: </span><a href="tuple-of.html">A</a><span class="token punctuation">, </span></span><span class="parameter ">second<span class="token operator">: </span><a href="tuple-of.html">B</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-duple/index.html">Duple</a><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token operator">&gt; </span><a href="tuple-of.html"><span class="token function">tupleOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">first<span class="token operator">: </span><a href="tuple-of.html">A</a><span class="token punctuation">, </span></span><span class="parameter ">second<span class="token operator">: </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span></span><span class="parameter ">third<span class="token operator">: </span><a href="tuple-of.html">C</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-truple/index.html">Truple</a><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token operator">&gt; </span><a href="tuple-of.html"><span class="token function">tupleOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">first<span class="token operator">: </span><a href="tuple-of.html">A</a><span class="token punctuation">, </span></span><span class="parameter ">second<span class="token operator">: </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span></span><span class="parameter ">third<span class="token operator">: </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span></span><span class="parameter ">fourth<span class="token operator">: </span><a href="tuple-of.html">D</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-quadruple/index.html">Quadruple</a><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span><a href="tuple-of.html">E</a><span class="token operator">&gt; </span><a href="tuple-of.html"><span class="token function">tupleOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">first<span class="token operator">: </span><a href="tuple-of.html">A</a><span class="token punctuation">, </span></span><span class="parameter ">second<span class="token operator">: </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span></span><span class="parameter ">third<span class="token operator">: </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span></span><span class="parameter ">fourth<span class="token operator">: </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span></span><span class="parameter ">fifth<span class="token operator">: </span><a href="tuple-of.html">E</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-quintuple/index.html">Quintuple</a><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span><a href="tuple-of.html">E</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span><a href="tuple-of.html">F</a><span class="token operator">&gt; </span><a href="tuple-of.html"><span class="token function">tupleOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">first<span class="token operator">: </span><a href="tuple-of.html">A</a><span class="token punctuation">, </span></span><span class="parameter ">second<span class="token operator">: </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span></span><span class="parameter ">third<span class="token operator">: </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span></span><span class="parameter ">fourth<span class="token operator">: </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span></span><span class="parameter ">fifth<span class="token operator">: </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span></span><span class="parameter ">sixth<span class="token operator">: </span><a href="tuple-of.html">F</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-sextuple/index.html">Sextuple</a><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span><a href="tuple-of.html">F</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span><a href="tuple-of.html">F</a><span class="token punctuation">, </span><a href="tuple-of.html">G</a><span class="token operator">&gt; </span><a href="tuple-of.html"><span class="token function">tupleOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">first<span class="token operator">: </span><a href="tuple-of.html">A</a><span class="token punctuation">, </span></span><span class="parameter ">second<span class="token operator">: </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span></span><span class="parameter ">third<span class="token operator">: </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span></span><span class="parameter ">fourth<span class="token operator">: </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span></span><span class="parameter ">fifth<span class="token operator">: </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span></span><span class="parameter ">sixth<span class="token operator">: </span><a href="tuple-of.html">F</a><span class="token punctuation">, </span></span><span class="parameter ">seventh<span class="token operator">: </span><a href="tuple-of.html">G</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-septuple/index.html">Septuple</a><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span><a href="tuple-of.html">F</a><span class="token punctuation">, </span><a href="tuple-of.html">G</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span><a href="tuple-of.html">F</a><span class="token punctuation">, </span><a href="tuple-of.html">G</a><span class="token punctuation">, </span><a href="tuple-of.html">H</a><span class="token operator">&gt; </span><a href="tuple-of.html"><span class="token function">tupleOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">first<span class="token operator">: </span><a href="tuple-of.html">A</a><span class="token punctuation">, </span></span><span class="parameter ">second<span class="token operator">: </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span></span><span class="parameter ">third<span class="token operator">: </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span></span><span class="parameter ">fourth<span class="token operator">: </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span></span><span class="parameter ">fifth<span class="token operator">: </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span></span><span class="parameter ">sixth<span class="token operator">: </span><a href="tuple-of.html">F</a><span class="token punctuation">, </span></span><span class="parameter ">seventh<span class="token operator">: </span><a href="tuple-of.html">G</a><span class="token punctuation">, </span></span><span class="parameter ">eighth<span class="token operator">: </span><a href="tuple-of.html">H</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-octuple/index.html">Octuple</a><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span><a href="tuple-of.html">F</a><span class="token punctuation">, </span><a href="tuple-of.html">G</a><span class="token punctuation">, </span><a href="tuple-of.html">H</a><span class="token operator">&gt;</span></div><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span><a href="tuple-of.html">F</a><span class="token punctuation">, </span><a href="tuple-of.html">G</a><span class="token punctuation">, </span><a href="tuple-of.html">H</a><span class="token punctuation">, </span><a href="tuple-of.html">I</a><span class="token operator">&gt; </span><a href="tuple-of.html"><span class="token function">tupleOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">first<span class="token operator">: </span><a href="tuple-of.html">A</a><span class="token punctuation">, </span></span><span class="parameter ">second<span class="token operator">: </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span></span><span class="parameter ">third<span class="token operator">: </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span></span><span class="parameter ">fourth<span class="token operator">: </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span></span><span class="parameter ">fifth<span class="token operator">: </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span></span><span class="parameter ">sixth<span class="token operator">: </span><a href="tuple-of.html">F</a><span class="token punctuation">, </span></span><span class="parameter ">seventh<span class="token operator">: </span><a href="tuple-of.html">G</a><span class="token punctuation">, </span></span><span class="parameter ">eighth<span class="token operator">: </span><a href="tuple-of.html">H</a><span class="token punctuation">, </span></span><span class="parameter ">ninth<span class="token operator">: </span><a href="tuple-of.html">I</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-nonuple/index.html">Nonuple</a><span class="token operator">&lt;</span><a href="tuple-of.html">A</a><span class="token punctuation">, </span><a href="tuple-of.html">B</a><span class="token punctuation">, </span><a href="tuple-of.html">C</a><span class="token punctuation">, </span><a href="tuple-of.html">D</a><span class="token punctuation">, </span><a href="tuple-of.html">E</a><span class="token punctuation">, </span><a href="tuple-of.html">F</a><span class="token punctuation">, </span><a href="tuple-of.html">G</a><span class="token punctuation">, </span><a href="tuple-of.html">H</a><span class="token punctuation">, </span><a href="tuple-of.html">I</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="footer">
+        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+        <span>© 2025 Copyright</span>
+        <span class="pull-right">
+            <span>Generated by </span>
+            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                <span>dokka</span>
+            </a>
+        </span>
+    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

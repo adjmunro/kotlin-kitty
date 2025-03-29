@@ -13,9 +13,9 @@ To enable `@JvmInline value class` and `data class` to behave like their interna
 - [Using in your Project](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#add-to-your-project)
 - Value Classes
     - [Strings & Mutable Strings](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#string-value-classes)
-    - [Numbers](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#string-value-classes)
+    - [Numbers](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#number-value-classes)
 - Data Classes / Tuples
-    - [Number Data Classes](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#string-value-classes)
+    - [Number Data Classes](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#number-data-classes)
     - [Other Tuples](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#tuples)
 - [Why Does This Exist](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#why-does-this-exist)
 - [Documentation](https://adjmunro.github.io/project-kitty/)

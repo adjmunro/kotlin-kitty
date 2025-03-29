@@ -15,3 +15,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: toshimaru/auto-author-assign@v2.1.1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

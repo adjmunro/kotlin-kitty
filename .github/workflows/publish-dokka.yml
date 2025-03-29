@@ -8,8 +8,8 @@ on:
 
   ## Delete below when merged to main!
   ## Added such that one can test pages deployment on branch before merging
-  pull_request:
-    branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:

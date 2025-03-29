@@ -1,0 +1,20 @@
+name: Test latest Gradle RC
+on:
+  schedule:
+    - cron: 0 0 * * * # daily
+jobs:
+  gradle-rc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - uses: gradle/actions/setup-gradle@v4
+        id: setup-gradle
+        with:
+          gradle-version: release-candidate
+      - run: gradle build --dry-run # just test build configuration
+      - run: echo "The release-candidate version was ${{ steps.setup-gradle.outputs.gradle-version }}"

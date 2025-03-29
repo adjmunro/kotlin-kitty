@@ -8,6 +8,7 @@ permissions:
 
 jobs:
   dependency-review:
+    if: false # disable until repo is public or a fix is found
     runs-on: ubuntu-latest
     steps:
       - name: 'Dependency Review'

@@ -1,18 +1,5 @@
-# TODO: Prepping to go open source (in no particular order)
-- [ ] Comprehensive unit test coverage
-- [x] Remove unused dependencies from version catalog, used code, unused comments
-- [ ] Add dependabot to update kotlin / dependencies
-- [ ] Add gradle wrapper update plugin
-- [ ] Buy domain name
-- [ ] Register for maven repository
-- [ ] Add CI to build, run unit tests, & publish
-- [ ] Add CI to update semver numbers (e.g. major for big changes, minor for small changes, patch for dependabot updates)
-- [ ] Add CI to auto-merge dependabot PRs if tests are green
-- [ ] Rework readme and add examples
-- [ ] Numbery rangeTo operator
-- [ ] Tuple contains, rangeTo, and compareTo(in 0 to ±n)
-
-# Kty: A Kotlin Library to Interface & Delegate Primitives' Operators for Value & Data Classes
+# Kty <sub>[docs](https://adjmunro.github.io/project-kitty/)</sub>
+**A Kotlin-y Library to Interface & Delegate Primitives' Operators for Value & Data Classes**
 
 *Or, "Kotlin's missing math operator interfaces and other delusions."*
 
@@ -22,17 +9,19 @@ To enable `@JvmInline value class` and `data class` to behave like their interna
 *No reflecktion! No annotation magick! Just plain-old type-system abuse.*
 
 ---
-# Caveats
-What's the catch?
-1. This library has no way to implement `toString()` on your behalf. Without overriding, attempting to autocast to string *will* include the inline class name.
-2. This library has no way to implement the `equals()` operator on your behalf, so you can't compare a Boxed type against it's value type like with many of the other operators. This function is reserved, sorry. Having said that, equals seems to work pretty well out of the box. Two instances of the same value class are equal if the internal value is the same, meanwhile different types containing the same internal value are not equal. 
-3. This library only supports `Numbery` data classes up to 5 dimensions. Only because it seems unlikely to need more.
-4. This library only supports `Numbery` data classes of the same internal type. It's probably possible (just even more messy) to mix and match types, but seems unlikely to be useful.
-5. This library doesn't support `Numbery` data classes with other backing field properties. The main issue here is that on reconstruction, there's no way to identify and pass along a copy of the extra properties. 
-6. This library doesn't support bytes & shorts (secretly ints), chars (didn't seem very useful), or unsigned numbers (they don't even implement `Number`, but are value classes themselves).
 
-# Example Usage
-Without further ado, how do we use it?
+- [Using in your Project](https://github.com/adjmunro/project-kitty/edit/main/README.md#add-to-your-project)
+- Value Classes
+    - [Strings & Mutable Strings](https://github.com/adjmunro/project-kitty/edit/main/README.md#string-value-classes)
+    - [Numbers](https://github.com/adjmunro/project-kitty/edit/main/README.md#string-value-classes)
+- Data Classes / Tuples
+    - [Number Data Classes](https://github.com/adjmunro/project-kitty/edit/main/README.md#string-value-classes)
+    - [Other Tuples](https://github.com/adjmunro/project-kitty/edit/main/README.md#tuples)
+- [Why Does This Exist](https://github.com/adjmunro/project-kitty/edit/main/README.md#why-does-this-exist)
+- [Documentation](https://adjmunro.github.io/project-kitty/)
+- [TODO](https://github.com/adjmunro/project-kitty/edit/main/README.md#tuples)
+
+---
 
 ### String Value Classes
 There are two `String`-based value class interfaces: `Stringy` and `MutableStringy`. Because most `String` functions are actually extensions, `MutableStringy` not only supports the `plus` operator, it also has a `map` function that unwraps the value class, allows you to apply a transformation, like converting to lowercase, then reconstructs the value class instance with the new value. 
@@ -86,11 +75,11 @@ Implementing `Numbery2D` to `Numbery5D` will provide you with math operators aga
 // Important! In order to guarantee math operations, the backing field can ONLY be a Numbery implementation!
 data class Position(val x: Point, val y: Point): Numbery2D<Position, Point> {
     // (MUST) Implement this property using a function reference to the constructor.
-    override val reconstructor: (Point, Point) -> Postion get() = ::Position
     // Note: This function is called differently from value classes! This is because Numbery data classes
     // still use the Boxed interface. `value` therefore points to the tuple itself, and `reconstruct`
     // is implemented by the interface to unwrap the tuple into the backing fields 
     // to enable the same constructor reference trick.
+    override val reconstructor: (Point, Point) -> Postion get() = ::Position
   
     // (Recommended) You can provide secondary constructors for convenience.
     constructor(x: Number, y: Number): this(Point(x), Point(y))
@@ -102,13 +91,23 @@ val (x, y) = Position(4, 6) + Position(2, 5) * 7
 ```
 *Currently, the data class interface implementation is abusing the `componentN()` operators of data classes to avoid enforcing property names and/or necessitating overriding properties. This may be subject to change depending on the language development. We'll have to wait and see what happens with named destructuring, and whether positional destructuring is deprecated.*
 
+### Tuples
+Kty also supports tuples of size 2-9. These only come with basic functionality, but can be useful when returning multiple values, similar to Kotlin's `Pair` or `Triple`. Alternatively, you can extend the `Tuple` interface similar to `Numbery2D` to suit your own needs, such as requiring different backing field types for each argument of your data class.
+
 ---
 
 ### Add to your project
-// TODO
+TODO: I need to set up public publishing first.
+
+Local Builds:
+1. Clone the project
+2. Use `./gradlew build` to build
+3. use `./gradlew publishToMavenLocal` to publish to your local maven m2 directory.
+4. In `settings.gradle(.kts)` of the project you wish to use Kty in, add `mavenLocal()` to your dependency resolution block.
 
 ---
-# How we got here.
+
+# Why does this exist?
 ### Why use inline classes?
 
 Kotlin encourages us to codify our problem domain! We're encouraged to use type-safety to its fullest extent, using
@@ -146,7 +145,7 @@ class Zombie(
 makeZombie() // Zombie(id = "mike", name = "234567i")
 ```
 
-## Have you ever tried to wrap a `Number`?
+### Have you ever tried to wrap a `Number`?
 
 *I have, and it wasn't pretty.*
 
@@ -243,7 +242,7 @@ These all have pretty clear requirements, with definite patterns emerging:
 5. (or #3b) The parent interface *needs* to know how to remake the child instance!
 6. Generics quickly become a massive headache for any consumer of your type.
 
-# 3am
+### 3am
 *The best ideas come at 3am. Unfortunately; because I wanted to sleep. -_-*
 
 Fortunately, I thought "maybe the generics *are* the problem?"
@@ -257,3 +256,21 @@ Then, all kinds of things came together:
   4. A method reference to the child wrapper's constructor.
 - Using those properties you can start creating interfaces to guarantee all sorts of behaviour!
 - Interfaces should be more specific where possible. Member `val` properties of lambdas can be assigned to specific method references to effectively delegate the operations to a real Kotlin class.
+
+---
+
+# TODO
+- [ ] Comprehensive unit test coverage
+- [x] Remove unused dependencies from version catalog, used code, unused comments
+- [x] Add dependabot to update kotlin / dependencies
+- [ ] Add gradle wrapper update plugin
+- [ ] Buy domain name
+- [ ] Register for maven repository
+- [x] Add CI to build, run unit tests
+- [ ] Add CI to publish
+- [x] Add CI to publish docs
+- [ ] Add CI to update semver numbers (e.g. major for big changes, minor for small changes, patch for dependabot updates)
+- [ ] Add CI to auto-merge dependabot PRs if tests are green
+- [x] Rework readme and add examples
+- [ ] Numbery rangeTo operator
+- [ ] Tuple contains, rangeTo, and compareTo(in 0 to ±n)

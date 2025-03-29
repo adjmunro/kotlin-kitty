@@ -80,8 +80,8 @@ jacoco {
 }
 
 tasks.register<Jar>("dokkaJar") {
-    from(tasks.dokkaHtml)
-    dependsOn(tasks.dokkaHtml)
+    from(tasks.dokkaGeneratePublicationHtml)
+    dependsOn(tasks.dokkaGeneratePublicationHtml)
     archiveClassifier.set("javadoc")
 }
 

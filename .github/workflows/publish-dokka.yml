@@ -31,7 +31,7 @@ jobs:
           java-version: 21
 
       - name: Build documentation
-        run: ./gradlew dokkaHtml
+        run: ./gradlew dokkaGenerate
 
       - name: Publish documentation
         uses: JamesIves/github-pages-deploy-action@releases/v4

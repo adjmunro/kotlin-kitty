@@ -53,6 +53,10 @@ sourceSets {
     val test by getting { kotlin.srcDirs("src/test/kotlin") }
 }
 
+tasks.wrapper {
+    gradleVersion = "latest"
+}
+
 tasks.test {
     useJUnitPlatform()
     finalizedBy(tasks.jacocoTestReport)

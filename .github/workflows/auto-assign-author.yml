@@ -1,13 +1,18 @@
-name: 'Auto Assign'
+name: Auto Author Assign
+
 on:
+  issues:
+    types: [ opened, reopened ]
   pull_request_target:
-    types: [opened, reopened, ready_for_review]
+    types: [ opened, reopened ]
+
+permissions:
+  issues: write
+  pull-requests: write
 
 jobs:
-  auto-assign:
+  assign-author:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - uses: toshimaru/auto-author-assign@v2.1.1
         with:

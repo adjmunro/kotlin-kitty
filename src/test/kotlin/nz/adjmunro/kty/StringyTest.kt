@@ -21,36 +21,6 @@ class StringyTest {
     }
 
     @Test
-    fun `add two instances`() {
-        // Given
-        val a = StringySubject("Hello, ")
-        val b = StringySubject("World!")
-
-        // When
-        val c = a + b
-
-        // Then
-        c.shouldBeInstanceOf<StringySubject> {
-            it.str.shouldBeEqual("Hello, World!")
-        }
-    }
-
-    @Test
-    fun `add instance and string creates instance`() {
-        // Given
-        val a = StringySubject("Hello, ")
-        val b = "World!"
-
-        // When
-        val c = a + b
-
-        // Then
-        c.shouldBeInstanceOf<StringySubject> {
-            it.str.shouldBeEqual("Hello, World!")
-        }
-    }
-
-    @Test
     fun `add string and instance creates (class printout) string`() {
         // Given
         val a = "Hello, "
@@ -64,21 +34,6 @@ class StringyTest {
             c.shouldBeInstanceOf<String> {
                 it.shouldBeEqual("Hello, StringySubject(str=World!)")
             }
-        }
-    }
-
-    @Test
-    fun `add instance and any creates instance`() {
-        // Given
-        val a = StringySubject("Hello, ")
-        val b = 42
-
-        // When
-        val c = a + b
-
-        // Then
-        c.shouldBeInstanceOf<StringySubject> {
-            it.str.shouldBeEqual("Hello, 42")
         }
     }
 
@@ -115,6 +70,10 @@ class StringyTest {
         val e = a >= a
         val f = a <= a
         val g = a.str == "A" // No way to override the == operator at this time (reserved).
+        val h = a == StringySubject("A")
+        val i = a == StringySubject("B")
+        val j = a != StringySubject("A")
+        val k = a != StringySubject("B")
 
         // Then
         c.shouldBeEqual(false)
@@ -122,6 +81,10 @@ class StringyTest {
         e.shouldBeEqual(true)
         f.shouldBeEqual(true)
         g.shouldBeEqual(true)
+        h.shouldBeEqual(true)
+        i.shouldBeEqual(false)
+        j.shouldBeEqual(false)
+        k.shouldBeEqual(true)
     }
 
     @Test

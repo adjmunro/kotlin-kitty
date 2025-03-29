@@ -10,16 +10,16 @@ To enable `@JvmInline value class` and `data class` to behave like their interna
 
 ---
 
-- [Using in your Project](https://github.com/adjmunro/project-kitty/edit/main/README.md#add-to-your-project)
+- [Using in your Project](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#add-to-your-project)
 - Value Classes
-    - [Strings & Mutable Strings](https://github.com/adjmunro/project-kitty/edit/main/README.md#string-value-classes)
-    - [Numbers](https://github.com/adjmunro/project-kitty/edit/main/README.md#string-value-classes)
+    - [Strings & Mutable Strings](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#string-value-classes)
+    - [Numbers](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#string-value-classes)
 - Data Classes / Tuples
-    - [Number Data Classes](https://github.com/adjmunro/project-kitty/edit/main/README.md#string-value-classes)
-    - [Other Tuples](https://github.com/adjmunro/project-kitty/edit/main/README.md#tuples)
-- [Why Does This Exist](https://github.com/adjmunro/project-kitty/edit/main/README.md#why-does-this-exist)
+    - [Number Data Classes](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#string-value-classes)
+    - [Other Tuples](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#tuples)
+- [Why Does This Exist](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#why-does-this-exist)
 - [Documentation](https://adjmunro.github.io/project-kitty/)
-- [TODO](https://github.com/adjmunro/project-kitty/edit/main/README.md#tuples)
+- [TODO](https://github.com/adjmunro/project-kitty?tab=readme-ov-file#todo)
 
 ---
 

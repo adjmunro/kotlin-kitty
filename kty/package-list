@@ -14,6 +14,8 @@ $dokka.location:nz.adjmunro.kty.functions.operators.cast/NumberCastable///Pointi
 $dokka.location:nz.adjmunro.kty.functions.operators.cast/RoundCastable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.cast/-round-castable/index.html
 $dokka.location:nz.adjmunro.kty.functions.operators.cast/RoundCastable/roundToInt/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.cast/-round-castable/round-to-int.html
 $dokka.location:nz.adjmunro.kty.functions.operators.cast/RoundCastable/roundToLong/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.cast/-round-castable/round-to-long.html
+$dokka.location:nz.adjmunro.kty.functions.operators.cast/Specifiable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.cast/-specifiable/index.html
+$dokka.location:nz.adjmunro.kty.functions.operators.cast/Specifiable/spec/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.cast/-specifiable/spec.html
 $dokka.location:nz.adjmunro.kty.functions.operators.cast/Wholable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.cast/-wholable/index.html
 $dokka.location:nz.adjmunro.kty.functions.operators.cast/Wholable/asBigInteger/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.cast/-wholable/as-big-integer.html
 $dokka.location:nz.adjmunro.kty.functions.operators.cast/Wholable/asInt/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.cast/-wholable/as-int.html
@@ -37,6 +39,12 @@ $dokka.location:nz.adjmunro.kty.functions.operators.div/NumberDivisible///Pointi
 $dokka.location:nz.adjmunro.kty.functions.operators.div/NumberDivisible/div/#kotlin.Number/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.div/-number-divisible/div.html
 $dokka.location:nz.adjmunro.kty.functions.operators.div/NumberDivisible/divideByNumber/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.div/-number-divisible/divide-by-number.html
 $dokka.location:nz.adjmunro.kty.functions.operators.minus////PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/index.html
+$dokka.location:nz.adjmunro.kty.functions.operators.minus/Decrementable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/-decrementable/index.html
+$dokka.location:nz.adjmunro.kty.functions.operators.minus/Decrementable/dec/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/-decrementable/dec.html
+$dokka.location:nz.adjmunro.kty.functions.operators.minus/Decrementable/decrement/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/-decrementable/decrement.html
+$dokka.location:nz.adjmunro.kty.functions.operators.minus/Negatable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/-negatable/index.html
+$dokka.location:nz.adjmunro.kty.functions.operators.minus/Negatable/negate/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/-negatable/negate.html
+$dokka.location:nz.adjmunro.kty.functions.operators.minus/Negatable/unaryMinus/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/-negatable/unary-minus.html
 $dokka.location:nz.adjmunro.kty.functions.operators.minus/NumberSubtractable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/-number-subtractable/index.html
 $dokka.location:nz.adjmunro.kty.functions.operators.minus/NumberSubtractable/minus/#kotlin.Number/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/-number-subtractable/minus.html
 $dokka.location:nz.adjmunro.kty.functions.operators.minus/NumberSubtractable/subtractByNumber/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/-number-subtractable/subtract-by-number.html
@@ -44,12 +52,18 @@ $dokka.location:nz.adjmunro.kty.functions.operators.minus/Subtractable///Pointin
 $dokka.location:nz.adjmunro.kty.functions.operators.minus/Subtractable/minus/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/-subtractable/minus.html
 $dokka.location:nz.adjmunro.kty.functions.operators.minus/Subtractable/minus/#TypeParam(bounds=[nz.adjmunro.kty.functions.operators.minus.Subtractable[^,TypeParam(bounds=[kotlin.Any?])]])/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.minus/-subtractable/minus.html
 $dokka.location:nz.adjmunro.kty.functions.operators.plus////PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/index.html
+$dokka.location:nz.adjmunro.kty.functions.operators.plus/Absolutable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-absolutable/index.html
+$dokka.location:nz.adjmunro.kty.functions.operators.plus/Absolutable/absolute/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-absolutable/absolute.html
+$dokka.location:nz.adjmunro.kty.functions.operators.plus/Absolutable/unaryPlus/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-absolutable/unary-plus.html
 $dokka.location:nz.adjmunro.kty.functions.operators.plus/Addable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-addable/index.html
 $dokka.location:nz.adjmunro.kty.functions.operators.plus/Addable/plus/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-addable/plus.html
 $dokka.location:nz.adjmunro.kty.functions.operators.plus/Addable/plus/#TypeParam(bounds=[nz.adjmunro.kty.functions.operators.plus.Addable[^,TypeParam(bounds=[kotlin.Any?])]])/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-addable/plus.html
 $dokka.location:nz.adjmunro.kty.functions.operators.plus/AnyAddable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-any-addable/index.html
 $dokka.location:nz.adjmunro.kty.functions.operators.plus/AnyAddable/addByAny/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-any-addable/add-by-any.html
 $dokka.location:nz.adjmunro.kty.functions.operators.plus/AnyAddable/plus/#kotlin.Any?/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-any-addable/plus.html
+$dokka.location:nz.adjmunro.kty.functions.operators.plus/Incrementable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-incrementable/index.html
+$dokka.location:nz.adjmunro.kty.functions.operators.plus/Incrementable/inc/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-incrementable/inc.html
+$dokka.location:nz.adjmunro.kty.functions.operators.plus/Incrementable/increment/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-incrementable/increment.html
 $dokka.location:nz.adjmunro.kty.functions.operators.plus/NumberAddable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-number-addable/index.html
 $dokka.location:nz.adjmunro.kty.functions.operators.plus/NumberAddable/addByNumber/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-number-addable/add-by-number.html
 $dokka.location:nz.adjmunro.kty.functions.operators.plus/NumberAddable/plus/#kotlin.Number/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.plus/-number-addable/plus.html
@@ -60,9 +74,6 @@ $dokka.location:nz.adjmunro.kty.functions.operators.rem/NumberRemainderable/rema
 $dokka.location:nz.adjmunro.kty.functions.operators.rem/Remainderable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.rem/-remainderable/index.html
 $dokka.location:nz.adjmunro.kty.functions.operators.rem/Remainderable/rem/#TypeParam(bounds=[nz.adjmunro.kty.functions.operators.rem.Remainderable[^,TypeParam(bounds=[kotlin.Any?])]])/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.rem/-remainderable/rem.html
 $dokka.location:nz.adjmunro.kty.functions.operators.rem/Remainderable/remainder/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.rem/-remainderable/remainder.html
-$dokka.location:nz.adjmunro.kty.functions.operators.specify////PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.specify/index.html
-$dokka.location:nz.adjmunro.kty.functions.operators.specify/NumberSpecifiable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.specify/-number-specifiable/index.html
-$dokka.location:nz.adjmunro.kty.functions.operators.specify/NumberSpecifiable/spec/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.specify/-number-specifiable/spec.html
 $dokka.location:nz.adjmunro.kty.functions.operators.times////PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.times/index.html
 $dokka.location:nz.adjmunro.kty.functions.operators.times/Multipliable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.times/-multipliable/index.html
 $dokka.location:nz.adjmunro.kty.functions.operators.times/Multipliable/times/#/PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators.times/-multipliable/times.html
@@ -73,6 +84,7 @@ $dokka.location:nz.adjmunro.kty.functions.operators.times/NumberMultipliable/tim
 $dokka.location:nz.adjmunro.kty.functions.operators////PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators/index.html
 $dokka.location:nz.adjmunro.kty.functions.operators/Mathable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators/-mathable/index.html
 $dokka.location:nz.adjmunro.kty.functions.operators/NumberMathable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators/-number-mathable/index.html
+$dokka.location:nz.adjmunro.kty.functions.operators/UnaryMathable///PointingToDeclaration/kty/nz.adjmunro.kty.functions.operators/-unary-mathable/index.html
 $dokka.location:nz.adjmunro.kty.functions////PointingToDeclaration/kty/nz.adjmunro.kty.functions/index.html
 $dokka.location:nz.adjmunro.kty.functions/DifferenceAB///PointingToDeclaration/kty/nz.adjmunro.kty.functions/-difference-a-b/index.html
 $dokka.location:nz.adjmunro.kty.functions/DifferenceAB/invoke/#TypeParam(bounds=[kotlin.Any?])#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/kty/nz.adjmunro.kty.functions/-difference-a-b/invoke.html
@@ -290,6 +302,11 @@ $dokka.location:nz.adjmunro.kty.tuple/Tuple7///PointingToDeclaration/kty/nz.adj
 $dokka.location:nz.adjmunro.kty.tuple/Tuple8///PointingToDeclaration/kty/nz.adjmunro.kty.tuple/-tuple8/index.html
 $dokka.location:nz.adjmunro.kty.tuple/Tuple9///PointingToDeclaration/kty/nz.adjmunro.kty.tuple/-tuple9/index.html
 $dokka.location:nz.adjmunro.kty////PointingToDeclaration/kty/nz.adjmunro.kty/index.html
+$dokka.location:nz.adjmunro.kty//abs/#TypeParam(bounds=[nz.adjmunro.kty.Numbery[^,*]])/PointingToDeclaration/kty/nz.adjmunro.kty/abs.html
+$dokka.location:nz.adjmunro.kty//max/#TypeParam(bounds=[nz.adjmunro.kty.Numbery[^,*]])#TypeParam(bounds=[nz.adjmunro.kty.Numbery[^,*]])/PointingToDeclaration/kty/nz.adjmunro.kty/max.html
+$dokka.location:nz.adjmunro.kty//max/#TypeParam(bounds=[nz.adjmunro.kty.Numbery[^,*]])#kotlin.Number/PointingToDeclaration/kty/nz.adjmunro.kty/max.html
+$dokka.location:nz.adjmunro.kty//min/#TypeParam(bounds=[nz.adjmunro.kty.Numbery[^,*]])#TypeParam(bounds=[nz.adjmunro.kty.Numbery[^,*]])/PointingToDeclaration/kty/nz.adjmunro.kty/min.html
+$dokka.location:nz.adjmunro.kty//min/#TypeParam(bounds=[nz.adjmunro.kty.Numbery[^,*]])#kotlin.Number/PointingToDeclaration/kty/nz.adjmunro.kty/min.html
 $dokka.location:nz.adjmunro.kty/Angle.Companion///PointingToDeclaration/kty/nz.adjmunro.kty/-angle/-companion/index.html
 $dokka.location:nz.adjmunro.kty/Angle.Companion/asDegrees/nz.adjmunro.kty.Angle[*]#/PointingToDeclaration/kty/nz.adjmunro.kty/-angle/-companion/as-degrees.html
 $dokka.location:nz.adjmunro.kty/Angle.Companion/asRadians/nz.adjmunro.kty.Angle[*]#/PointingToDeclaration/kty/nz.adjmunro.kty/-angle/-companion/as-radians.html
@@ -309,42 +326,62 @@ $dokka.location:nz.adjmunro.kty/Angle///PointingToDeclaration/kty/nz.adjmunro.k
 $dokka.location:nz.adjmunro.kty/Boxed///PointingToDeclaration/kty/nz.adjmunro.kty/-boxed/index.html
 $dokka.location:nz.adjmunro.kty/Boxed/value/#/PointingToDeclaration/kty/nz.adjmunro.kty/-boxed/value.html
 $dokka.location:nz.adjmunro.kty/Doubly///PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/index.html
+$dokka.location:nz.adjmunro.kty/Doubly/absolute/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/absolute.html
 $dokka.location:nz.adjmunro.kty/Doubly/compareToSelf/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/compare-to-self.html
+$dokka.location:nz.adjmunro.kty/Doubly/decrement/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/decrement.html
 $dokka.location:nz.adjmunro.kty/Doubly/divide/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/divide.html
+$dokka.location:nz.adjmunro.kty/Doubly/increment/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/increment.html
 $dokka.location:nz.adjmunro.kty/Doubly/minus/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/minus.html
+$dokka.location:nz.adjmunro.kty/Doubly/negate/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/negate.html
 $dokka.location:nz.adjmunro.kty/Doubly/plus/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/plus.html
 $dokka.location:nz.adjmunro.kty/Doubly/remainder/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/remainder.html
 $dokka.location:nz.adjmunro.kty/Doubly/roundToInt/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/round-to-int.html
 $dokka.location:nz.adjmunro.kty/Doubly/roundToLong/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/round-to-long.html
+$dokka.location:nz.adjmunro.kty/Doubly/sign/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/sign.html
 $dokka.location:nz.adjmunro.kty/Doubly/spec/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/spec.html
 $dokka.location:nz.adjmunro.kty/Doubly/times/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/times.html
 $dokka.location:nz.adjmunro.kty/Doubly/value/#/PointingToDeclaration/kty/nz.adjmunro.kty/-doubly/value.html
 $dokka.location:nz.adjmunro.kty/Floaty///PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/index.html
+$dokka.location:nz.adjmunro.kty/Floaty/absolute/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/absolute.html
 $dokka.location:nz.adjmunro.kty/Floaty/compareToSelf/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/compare-to-self.html
+$dokka.location:nz.adjmunro.kty/Floaty/decrement/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/decrement.html
 $dokka.location:nz.adjmunro.kty/Floaty/divide/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/divide.html
+$dokka.location:nz.adjmunro.kty/Floaty/increment/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/increment.html
 $dokka.location:nz.adjmunro.kty/Floaty/minus/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/minus.html
+$dokka.location:nz.adjmunro.kty/Floaty/negate/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/negate.html
 $dokka.location:nz.adjmunro.kty/Floaty/plus/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/plus.html
 $dokka.location:nz.adjmunro.kty/Floaty/remainder/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/remainder.html
 $dokka.location:nz.adjmunro.kty/Floaty/roundToInt/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/round-to-int.html
 $dokka.location:nz.adjmunro.kty/Floaty/roundToLong/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/round-to-long.html
+$dokka.location:nz.adjmunro.kty/Floaty/sign/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/sign.html
 $dokka.location:nz.adjmunro.kty/Floaty/spec/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/spec.html
 $dokka.location:nz.adjmunro.kty/Floaty/times/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/times.html
 $dokka.location:nz.adjmunro.kty/Floaty/value/#/PointingToDeclaration/kty/nz.adjmunro.kty/-floaty/value.html
 $dokka.location:nz.adjmunro.kty/Inty///PointingToDeclaration/kty/nz.adjmunro.kty/-inty/index.html
+$dokka.location:nz.adjmunro.kty/Inty/absolute/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/absolute.html
 $dokka.location:nz.adjmunro.kty/Inty/compareToSelf/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/compare-to-self.html
+$dokka.location:nz.adjmunro.kty/Inty/decrement/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/decrement.html
 $dokka.location:nz.adjmunro.kty/Inty/divide/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/divide.html
+$dokka.location:nz.adjmunro.kty/Inty/increment/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/increment.html
 $dokka.location:nz.adjmunro.kty/Inty/minus/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/minus.html
+$dokka.location:nz.adjmunro.kty/Inty/negate/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/negate.html
 $dokka.location:nz.adjmunro.kty/Inty/plus/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/plus.html
 $dokka.location:nz.adjmunro.kty/Inty/remainder/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/remainder.html
+$dokka.location:nz.adjmunro.kty/Inty/sign/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/sign.html
 $dokka.location:nz.adjmunro.kty/Inty/spec/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/spec.html
 $dokka.location:nz.adjmunro.kty/Inty/times/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/times.html
 $dokka.location:nz.adjmunro.kty/Inty/value/#/PointingToDeclaration/kty/nz.adjmunro.kty/-inty/value.html
 $dokka.location:nz.adjmunro.kty/Longy///PointingToDeclaration/kty/nz.adjmunro.kty/-longy/index.html
+$dokka.location:nz.adjmunro.kty/Longy/absolute/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/absolute.html
 $dokka.location:nz.adjmunro.kty/Longy/compareToSelf/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/compare-to-self.html
+$dokka.location:nz.adjmunro.kty/Longy/decrement/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/decrement.html
 $dokka.location:nz.adjmunro.kty/Longy/divide/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/divide.html
+$dokka.location:nz.adjmunro.kty/Longy/increment/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/increment.html
 $dokka.location:nz.adjmunro.kty/Longy/minus/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/minus.html
+$dokka.location:nz.adjmunro.kty/Longy/negate/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/negate.html
 $dokka.location:nz.adjmunro.kty/Longy/plus/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/plus.html
 $dokka.location:nz.adjmunro.kty/Longy/remainder/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/remainder.html
+$dokka.location:nz.adjmunro.kty/Longy/sign/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/sign.html
 $dokka.location:nz.adjmunro.kty/Longy/spec/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/spec.html
 $dokka.location:nz.adjmunro.kty/Longy/times/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/times.html
 $dokka.location:nz.adjmunro.kty/Longy/value/#/PointingToDeclaration/kty/nz.adjmunro.kty/-longy/value.html
@@ -363,6 +400,7 @@ $dokka.location:nz.adjmunro.kty/Numbery/compareByNumber/#/PointingToDeclaration/
 $dokka.location:nz.adjmunro.kty/Numbery/divideByNumber/#/PointingToDeclaration/kty/nz.adjmunro.kty/-numbery/divide-by-number.html
 $dokka.location:nz.adjmunro.kty/Numbery/multiplyByNumber/#/PointingToDeclaration/kty/nz.adjmunro.kty/-numbery/multiply-by-number.html
 $dokka.location:nz.adjmunro.kty/Numbery/remainderByNumber/#/PointingToDeclaration/kty/nz.adjmunro.kty/-numbery/remainder-by-number.html
+$dokka.location:nz.adjmunro.kty/Numbery/sign/#/PointingToDeclaration/kty/nz.adjmunro.kty/-numbery/sign.html
 $dokka.location:nz.adjmunro.kty/Numbery/subtractByNumber/#/PointingToDeclaration/kty/nz.adjmunro.kty/-numbery/subtract-by-number.html
 $dokka.location:nz.adjmunro.kty/Stringy///PointingToDeclaration/kty/nz.adjmunro.kty/-stringy/index.html
 $dokka.location:nz.adjmunro.kty/Stringy/compareToSelf/#/PointingToDeclaration/kty/nz.adjmunro.kty/-stringy/compare-to-self.html
@@ -379,7 +417,6 @@ nz.adjmunro.kty.functions.operators.div
 nz.adjmunro.kty.functions.operators.minus
 nz.adjmunro.kty.functions.operators.plus
 nz.adjmunro.kty.functions.operators.rem
-nz.adjmunro.kty.functions.operators.specify
 nz.adjmunro.kty.functions.operators.times
 nz.adjmunro.kty.tuple
 nz.adjmunro.kty.tuple.numbery

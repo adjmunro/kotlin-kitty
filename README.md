@@ -272,5 +272,22 @@ Then, all kinds of things came together:
 - [ ] Add CI to update semver numbers (e.g. major for big changes, minor for small changes, patch for dependabot updates)
 - [ ] Add CI to auto-merge dependabot PRs if tests are green
 - [x] Rework readme and add examples
-- [ ] Numbery rangeTo operator
-- [ ] Tuple contains, rangeTo, and compareTo(in 0 to ±n)
+
+- Numbery operators: 
+  - [ ] rangeTo
+  - [ ] rangeUntil
+  - [ ] unary minus
+  - [ ] unary plus
+  - [ ] increment
+  - [ ] decrement
+  - [ ] plus assign
+  - [ ] minus assign
+- Tuple operators:
+  - [ ] contains
+  - [ ] rangeTo
+  - [ ] rangeUntil
+  - [ ] compareTo(in 0 to ±n)
+  - [ ] dot product
+  - [ ] cross product
+  - [ ] normalise
+- [ ] booleany value class interface

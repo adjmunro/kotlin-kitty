@@ -4,6 +4,8 @@ package nz.adjmunro.kty.functions
 internal typealias Merge<Type> = (Type, Type) -> Type
 @KtyDsl
 internal typealias Difference<Type> = (Type, Type) -> Int
+@KtyDsl
+internal typealias Transform<Type> = (Type) -> Type
 
 @KtyDsl
 public fun interface MergeABtoA<A, B> {

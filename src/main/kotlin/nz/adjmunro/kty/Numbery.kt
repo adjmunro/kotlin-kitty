@@ -5,24 +5,28 @@ import nz.adjmunro.kty.functions.KtyDsl
 import nz.adjmunro.kty.functions.MergeABtoA
 import nz.adjmunro.kty.functions.operators.Mathable
 import nz.adjmunro.kty.functions.operators.NumberMathable
+import nz.adjmunro.kty.functions.operators.UnaryMathable
 import nz.adjmunro.kty.functions.operators.cast.NumberCastable
 import nz.adjmunro.kty.functions.operators.comparable.BoxedComparable
 import nz.adjmunro.kty.functions.operators.comparable.NumberComparable
-import nz.adjmunro.kty.functions.operators.specify.NumberSpecifiable
+import nz.adjmunro.kty.functions.operators.cast.Specifiable
 import java.math.BigDecimal
 import java.math.BigInteger
 
 @KtyDsl
 public interface Numbery<ActualWrapper, BackingField> :
     Mathable<ActualWrapper, BackingField>,
+    UnaryMathable<ActualWrapper, BackingField>,
     BoxedComparable<ActualWrapper, BackingField>,
     NumberMathable<ActualWrapper, BackingField>,
     NumberComparable<ActualWrapper, BackingField>,
-    NumberSpecifiable<BackingField>,
+    Specifiable<Number, BackingField>,
     NumberCastable where
     ActualWrapper : Numbery<ActualWrapper, BackingField>,
     BackingField : Number
 {
+    public val sign: ActualWrapper
+
     override val asFloat: Float get() = value.toFloat()
     override val asDouble: Double get() = value.toDouble()
     override val asBigDecimal: BigDecimal get() = BigDecimal.valueOf(asDouble)
@@ -47,5 +51,4 @@ public interface Numbery<ActualWrapper, BackingField> :
 
     override val compareByNumber: DifferenceAB<BackingField, Number>
         get() = DifferenceAB { a: BackingField, b: Number -> compareToSelf(a, spec(b)) }
-
 }

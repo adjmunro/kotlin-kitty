@@ -8,7 +8,7 @@ import nz.adjmunro.kty.functions.operators.NumberMathable
 import nz.adjmunro.kty.functions.operators.cast.NumberCastable
 import nz.adjmunro.kty.functions.operators.comparable.BoxedComparable
 import nz.adjmunro.kty.functions.operators.comparable.NumberComparable
-import nz.adjmunro.kty.functions.operators.specify.NumberSpecifiable
+import nz.adjmunro.kty.functions.operators.cast.Specifiable
 import java.math.BigDecimal
 import java.math.BigInteger
 
@@ -18,7 +18,7 @@ public interface Numbery<ActualWrapper, BackingField> :
     BoxedComparable<ActualWrapper, BackingField>,
     NumberMathable<ActualWrapper, BackingField>,
     NumberComparable<ActualWrapper, BackingField>,
-    NumberSpecifiable<BackingField>,
+    Specifiable<Number, BackingField>,
     NumberCastable where
     ActualWrapper : Numbery<ActualWrapper, BackingField>,
     BackingField : Number

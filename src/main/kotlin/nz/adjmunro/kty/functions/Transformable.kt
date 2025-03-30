@@ -9,7 +9,7 @@ public interface Transformable<ActualWrapper, BackingField> :
 
     /** Applies some [transform] to the [BackingField] and [reconstructs][reconstruct] the [ActualWrapper]. */
     @KtyDsl
-    public infix fun map(transform: (BackingField) -> BackingField): ActualWrapper {
+    public infix fun map(transform: Transform<BackingField>): ActualWrapper {
         return reconstruct(transform(value))
     }
 

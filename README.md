@@ -276,12 +276,15 @@ Then, all kinds of things came together:
 - Numbery operators: 
   - [ ] rangeTo
   - [ ] rangeUntil
-  - [ ] unary minus
-  - [ ] unary plus
-  - [ ] increment
-  - [ ] decrement
+  - [x] unary minus
+  - [x] unary plus
+  - [x] increment
+  - [x] decrement
   - [ ] plus assign
   - [ ] minus assign
+  - [ ] BigInteger / BigDecimal support
+  - [ ] Decimally / Wholly Intermediate interfaces
+  - [ ] Pow
 - Tuple operators:
   - [ ] contains
   - [ ] rangeTo

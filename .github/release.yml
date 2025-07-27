@@ -1,0 +1,26 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+  categories:
+    - title: 🏕 Features
+      labels:
+        - feat
+        - feature
+    - title: 🐛Bug Fixes
+      labels:
+        - bug
+        - fix
+    - title: 🦖Tech Debt, Refactoring, & Other
+      labels:
+        - '*'
+      exclude:
+        labels:
+          - feat
+          - feature
+          - dependencies
+          - bug
+          - fix
+    - title: 🤖 Dependencies
+      labels:
+        - dependencies

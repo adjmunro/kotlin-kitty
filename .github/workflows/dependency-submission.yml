@@ -1,9 +1,8 @@
 name: Dependency Submission
 
 on:
-  push:
-    branches: [ 'main' ]
-  pull_request:
+  workflow_dispatch: # Manual dispatch from the Actions tab in GitHub.
+  workflow_call: # Allows this workflow to be called from other workflows.
 
 permissions:
   contents: write
@@ -13,10 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: 21
+
+      - name: Setup Java
+        uses: ./.github/actions/setup-java
 
       - name: Generate and submit dependency graph
         uses: gradle/actions/dependency-submission@v4

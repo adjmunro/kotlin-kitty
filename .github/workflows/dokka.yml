@@ -1,0 +1,28 @@
+name: Publish Dokka
+
+on:
+  workflow_dispatch: # Manual dispatch from the Actions tab in GitHub.
+  workflow_call: # Allows this workflow to be called from other workflows.
+
+jobs:
+  publish-dokka:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pages: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Java and Gradle
+        uses: ./.github/actions/setup-gradle
+
+      - name: Build Documentation
+        run: ./gradlew dokkaGenerate
+
+      - name: Publish Documentation to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@releases/v4
+        with:
+          BRANCH: gh-pages
+          FOLDER: build/dokka/html

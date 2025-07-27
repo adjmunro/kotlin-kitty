@@ -1,0 +1,23 @@
+name: Publish Release
+
+on:
+  workflow_dispatch: # Manual dispatch from the Actions tab in GitHub.
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  packages: write
+  pages: write
+
+jobs:
+  dokka:
+    uses: ./.github/workflows/dokka.yml
+
+  dependency-submission:
+    uses: ./.github/workflows/dependency-submission.yml
+
+  github-packages:
+    uses: ./.github/workflows/github-packages.yml
+    needs: [dokka, dependency-submission ]
